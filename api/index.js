@@ -237,9 +237,9 @@ app.delete('/api/yt-partners/:id', auth, async (req, res) => {
   res.json({ success: true });
 });
 
-// Debug route
+// Debug + catch-all
 app.all('*', (req, res) => {
-  res.json({ debug: true, method: req.method, path: req.path, url: req.url });
+  res.json({ debug: true, method: req.method, path: req.path, url: req.url, originalUrl: req.originalUrl });
 });
 
 // Local dev server
