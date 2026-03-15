@@ -1,34 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    },
-    {
-      "src": "server/supabase-backend.js",
-      "use": "@vercel/node"
-    }
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "client/build",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/server/supabase-backend.js" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "server/supabase-backend.js"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "client/build/static/$1"
-    },
-    {
-      "src": "/(.*\\.(png|jpg|jpeg|gif|webp|svg|ico|css|js))",
-      "dest": "client/build/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "client/build/index.html"
+  "functions": {
+    "server/supabase-backend.js": {
+      "memory": 512,
+      "maxDuration": 10
     }
-  ]
+  }
 }
