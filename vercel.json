@@ -19,8 +19,16 @@
       "dest": "server/supabase-backend.js"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "client/build/static/$1"
+    },
+    {
+      "src": "/(.*\\.(png|jpg|jpeg|gif|webp|svg|ico|css|js))",
+      "dest": "client/build/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "client/$1"
+      "dest": "client/build/index.html"
     }
   ]
 }
