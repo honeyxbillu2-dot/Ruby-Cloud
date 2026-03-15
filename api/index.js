@@ -244,4 +244,5 @@ if (require.main === module) {
   });
 }
 
+// Vercel serverless handler
 module.exports = app;
