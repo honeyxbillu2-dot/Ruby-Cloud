@@ -9,6 +9,7 @@ client/node_modules/
 .env.production.local
 client/.env
 client/.env.local
+client/.env.production.local
 server/.env
 
 # Database
