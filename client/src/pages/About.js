@@ -221,7 +221,7 @@ const About = () => {
                       fontSize: '1rem',
                       whiteSpace: 'nowrap',
                       display: 'inline-block'
-                    }}>Ruby Owner</span>
+                    }}>Ruby Co-Founder</span>
                   </div>
                 </div>
 
@@ -238,7 +238,7 @@ const About = () => {
                   border: '2px solid rgba(255, 208, 0, 0.2)',
                   background: 'linear-gradient(180deg, rgba(30,18,10,0.7), rgba(20,12,8,0.6))'
                 }}>
-                  <img src="/Venox...!.png" alt="Venox...!" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/logo.png' }} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                  <img src="/image.jpg" alt="B!LLU...!" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/logo.png' }} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
                 </div>
                 <div style={{
                   background: 'linear-gradient(135deg, #FF6A00, #FFD000)',
@@ -251,7 +251,7 @@ const About = () => {
                   marginBottom: '6px',
                   textTransform: 'uppercase'
                 }}>
-                  Operations Head
+                  Co-Founder
                 </div>
                 <h4 style={{
                   fontSize: '1.1rem',
@@ -259,7 +259,7 @@ const About = () => {
                   color: 'var(--text-primary)',
                   marginBottom: '8px'
                 }}>
-                  {about?.owner_name || '[Venox...!]'}
+                  {'[B ! L L U...!]'}
                 </h4>
                 <p style={{
                   color: 'var(--text-muted)',
@@ -267,7 +267,7 @@ const About = () => {
                   lineHeight: '1.5',
                   margin: 0
                 }}>
-                  Ruby Owner
+                  Ruby Co-Founder
                 </p>
               </div>
             </div>
@@ -399,7 +399,7 @@ const About = () => {
                       fontSize: '1rem',
                       whiteSpace: 'nowrap',
                       display: 'inline-block'
-                    }}>Ruby Admin</span>
+                    }}>Ruby Co-Owner</span>
                   </div>
                 </div>
                 <div style={{
@@ -418,13 +418,13 @@ const About = () => {
                   backgroundClip: 'text', fontSize: '0.65rem', fontWeight: '700',
                   letterSpacing: '1.5px', marginBottom: '6px', textTransform: 'uppercase'
                 }}>
-                  Admin
+                  Co-Owner
                 </div>
                 <h4 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--text-primary)', marginBottom: '8px' }}>
                   OpBhaiCraft
                 </h4>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: '1.5', margin: 0 }}>
-                  Ruby Admin
+                  Ruby Co-Owner
                 </p>
               </div>
             </div>
