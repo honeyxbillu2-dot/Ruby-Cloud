@@ -188,6 +188,7 @@ const About = () => {
               onMouseEnter={() => setHoveredCard('owner')}
               onMouseLeave={() => setHoveredCard(null)}
               style={{
+                order: 2,
                 background: 'transparent',
                 border: hoveredCard === 'owner' ? '1px solid rgba(255,106,0,0.18)' : '1px solid rgba(255,106,0,0.08)',
                 borderRadius: '18px',
@@ -277,6 +278,7 @@ const About = () => {
               onMouseEnter={() => setHoveredCard('admin')}
               onMouseLeave={() => setHoveredCard(null)}
               style={{
+                order: 1,
                 background: 'transparent',
                 border: hoveredCard === 'admin' ? '1px solid rgba(255,106,0,0.18)' : '1px solid rgba(255,106,0,0.08)',
                 borderRadius: '18px',
@@ -288,8 +290,7 @@ const About = () => {
                 transform: hoveredCard === 'admin' ? 'translateY(-8px) scale(1.02)' : 'translateY(0)',
                 boxShadow: hoveredCard === 'admin'
                   ? '0 20px 48px rgba(255, 106, 0, 0.12)'
-                  : '0 6px 22px rgba(0,0,0,0.42)',
-                gridColumn: '1 / -1'
+                  : '0 6px 22px rgba(0,0,0,0.42)'
               }}>
               <div style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ position: 'absolute', top: '-52px', left: '50%', transform: 'translateX(-50%)', zIndex: 6 }}>
