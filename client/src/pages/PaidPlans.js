@@ -41,7 +41,7 @@ const PaidPlans = () => {
     { id: 6, name: 'Amethyst', ram: '12 GB', cpu: '300%', storage: '60 GB SSD', price: '1080 PKR/month', location: 'Singapore', discount: 0, sort_order: 6, is_active: 1 },
     { id: 7, name: 'Emerald', ram: '16 GB', cpu: '350%', storage: '70 GB SSD', price: '1440 PKR/month', location: 'Singapore', discount: 0, sort_order: 7, is_active: 1 },
     { id: 8, name: 'Ruby', ram: '20 GB', cpu: '400%', storage: '80 GB SSD', price: '1800 PKR/month', location: 'Singapore', discount: 0, sort_order: 8, is_active: 1 },
-    { id: 9, name: 'Black Ruby', ram: '32 GB', cpu: '500%', storage: '100 GB SSD', price: '3000 PKR/month', location: 'Singapore', discount: 0, sort_order: 9, is_active: 1 },
+    { id: 9, name: 'Rare Ruby', ram: '32 GB', cpu: '500%', storage: '100 GB SSD', price: '3000 PKR/month', location: 'Singapore', discount: 0, sort_order: 9, is_active: 1 },
   ];
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const PaidPlans = () => {
           if (a.sort_order !== undefined && b.sort_order !== undefined && a.sort_order !== b.sort_order) {
             return a.sort_order - b.sort_order;
           }
-          const namePriority = { 'bronze': 1, 'silver': 2, 'gold': 3, 'platinum': 4, 'amethyst': 5, 'diamond': 6, 'emerald': 7, 'ruby': 8, 'black ruby': 9 };
+          const namePriority = { 'bronze': 1, 'silver': 2, 'gold': 3, 'platinum': 4, 'amethyst': 5, 'diamond': 6, 'emerald': 7, 'ruby': 8, 'Rare Ruby': 9 };
           const getNamePriority = (name) => {
             const lower = name.toLowerCase();
             for (const key in namePriority) { if (lower.includes(key)) return namePriority[key]; }
@@ -199,7 +199,7 @@ const PaidPlans = () => {
 
   const getPlanEmoji = (name) => {
     const lowerName = name.toLowerCase();
-    if (lowerName.includes('black ruby')) return '🖤';
+    if (lowerName.includes('Rare Ruby')) return '🖤';
     if (lowerName.includes('ruby')) return '💎';
     if (lowerName.includes('emerald')) return '💚';
     if (lowerName.includes('amethyst')) return '💜';
@@ -218,7 +218,7 @@ const PaidPlans = () => {
 
   const getPlanIcon = (name) => {
     const lowerName = name.toLowerCase();
-    if (lowerName.includes('black ruby')) return '/black-ruby.png';
+    if (lowerName.includes('Rare Ruby')) return '/black-ruby.png';
     if (lowerName.includes('ruby')) return '/ruby.png';
     if (lowerName.includes('emerald')) return '/Emerald.webp';
     if (lowerName.includes('amethyst')) return '/amethyst.png';
@@ -232,7 +232,7 @@ const PaidPlans = () => {
 
   const getRankStyle = (name) => {
     const lowerName = name.toLowerCase();
-    if (lowerName.includes('black ruby')) return { bg: 'linear-gradient(135deg, #ff0040, #8b0000, #2d0a0a)' };
+    if (lowerName.includes('Rare Ruby')) return { bg: 'linear-gradient(135deg, #ff0040, #8b0000, #2d0a0a)' };
     if (lowerName.includes('amethyst')) return { bg: 'linear-gradient(135deg, #9b59b6, #8e44ad, #6c3483)' };
     if (lowerName.includes('ruby')) return { bg: 'linear-gradient(135deg, #ef4444, #dc2626)' };
     if (lowerName.includes('diamond')) return { bg: 'linear-gradient(135deg, #60a5fa, #3b82f6)' };
@@ -578,7 +578,7 @@ const PaidPlans = () => {
                             alt=""
                             className="plan-icon"
                             onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                            style={plan.name.toLowerCase().includes('black ruby') ? {
+                            style={plan.name.toLowerCase().includes('Rare Ruby') ? {
                               filter: 'drop-shadow(0 0 15px #ff0040) drop-shadow(0 0 30px #ff0040) drop-shadow(0 0 45px #8b0000)',
                               animation: 'blackRubyGlow 2s ease-in-out infinite alternate',
                               width: '42px',
@@ -591,15 +591,15 @@ const PaidPlans = () => {
                         {plan.name}
                       </h3>
                       <div className="spec">
-                        <span className="spec-label"><span className="spec-emoji ram-emoji">💾</span> NVMe RAM</span>
+                        <span className="spec-label"><span className="spec-emoji ram-emoji">💾</span> RAM</span>
                         <span className="spec-value">{plan.ram}</span>
                       </div>
                       <div className="spec">
-                        <span className="spec-label"><span className="spec-emoji cpu-emoji">💎</span> Ryzen 9 CPU</span>
+                        <span className="spec-label"><span className="spec-emoji cpu-emoji">💎</span> Intel CPU</span>
                         <span className="spec-value">{plan.cpu}</span>
                       </div>
                       <div className="spec">
-                        <span className="spec-label"><span className="spec-emoji storage-emoji">🚀</span> Gen4 SSD</span>
+                        <span className="spec-label"><span className="spec-emoji storage-emoji">🚀</span> SSD</span>
                         <span className="spec-value">{plan.storage}</span>
                       </div>
                       <div className="spec">
